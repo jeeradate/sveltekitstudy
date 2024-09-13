@@ -1,6 +1,9 @@
 <script>
 	import src from '$lib/assests/autohotkey.png';
-	import Hello from '$lib/components/Hello.svelte';
+	import {goto} from '$app/navigation';
+    function gotoTest(){
+        goto('/test');
+    }
 </script>
 
 <h1>Hello</h1>
@@ -39,9 +42,10 @@
     </div>
 </details>
 
-<details>
-    <summary>Section 2</summary>
-    <p>This is the content of section 2.</p>
+<details >
+    <summary>test code</summary>
+    <a href="/test">Test code</a>
 </details>
-
-
+<button on:click={gotoTest}>Test code</button>
+<br>
+<img src="{src}" alt="" srcset="" style="width: 300px;">
